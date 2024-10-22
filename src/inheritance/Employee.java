@@ -5,11 +5,12 @@ public class Employee {
 	protected double basicPay;
 	private static String worksFor = "C-DAC";
 	
-	public void setEmployee(int eid, String ename, double basicPay) {
+	public Employee(int eid, String ename, double basicPay) {
 		this.eid = eid;
 		this.ename= ename;
 		this.basicPay = basicPay;
 	}
+	
 	public void dispEmployee() {
 		System.out.println(eid+" "+ename+" "+basicPay+" "+worksFor);
 	}

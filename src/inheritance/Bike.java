@@ -2,7 +2,7 @@ package inheritance;
 
 public class Bike extends Vehicle{
 
-	@Override
+    @Override
 	public void run() {
 		System.out.println("Bike is running is safely");
 	}

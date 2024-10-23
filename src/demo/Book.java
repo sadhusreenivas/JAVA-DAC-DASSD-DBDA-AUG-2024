@@ -1,6 +1,6 @@
 package demo;
 
-public class Book { // fully encapsulated 
+public class Book implements Cloneable{ // fully encapsulated 
 	private int isbn;
 	private String title;
 	private String author;
@@ -25,7 +25,13 @@ public class Book { // fully encapsulated
 		return title;
 	}
 	
+public static void main(String[] args) throws CloneNotSupportedException{
+		
+		Book b1 = new Book(12345, "Java", "James", 500, 700);
+		System.out.println(b1);
+		
+		Book b2 = (Book) b1.clone();
+		System.out.println(b2);
 	
-	
-	
+}
 }

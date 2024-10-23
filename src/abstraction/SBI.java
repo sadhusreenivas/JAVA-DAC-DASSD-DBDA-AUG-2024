@@ -1,12 +1,15 @@
 package abstraction;
 
-public class SBI implements ATM {
+public class SBI implements ATM, TTP{
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		ATM a = new SBI();
-		a.transfer();
-		a.withdraw();
+		SBI sbi  = new SBI();
+		sbi.transfer();
+		sbi.withdraw();
+		sbi.confirmTransaction();
+		
+		
 	}
 
 	@Override
@@ -19,6 +22,12 @@ public class SBI implements ATM {
 	public void transfer() {
 		// TODO Auto-generated method stub
 		System.out.println("transfer success  and received: "+cashback);
+	}
+
+	@Override
+	public void confirmTransaction() {
+		// TODO Auto-generated method stub
+		System.out.println("transaction confirmed");
 	}
 
 }

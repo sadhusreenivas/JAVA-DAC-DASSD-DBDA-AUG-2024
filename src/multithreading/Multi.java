@@ -13,11 +13,9 @@ public class Multi extends Thread {
 				e.printStackTrace();
 			}
 		 }
-		
 	}
 
 	public static void main(String[] args) {
-		
 		
 		Multi t1 = new Multi(); // new 
 		t1.start(); // Runnable

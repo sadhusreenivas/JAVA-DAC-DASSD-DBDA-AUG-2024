@@ -20,7 +20,7 @@ public class StudentDemo {
 //		}
 		
 		System.out.println("*****************************");
-		studs.stream().forEach(System.out::println);
+		studs.forEach(System.out::println);
          
 		// find the average GPA of CSE
 		double sum = 0;
@@ -44,6 +44,11 @@ public class StudentDemo {
 		Collections.sort(studs, (s1, s2) -> s1.getName().length() - s2.getName().length());
 		System.out.println("*****************************");
 		studs.stream().forEach(System.out::println);
+		
+		
+		Collections.sort(studs, (s1, s2) -> (s2.getGpa() > s1.getGpa()) ? 1 : -1 );
+		System.out.println("*****************************");
+		studs.forEach(System.out::println);
 		/*
 		System.out.println(studs.stream().filter(x -> x.getCourse().equals("CSE")).count());
 		
